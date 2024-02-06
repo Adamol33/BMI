@@ -1,0 +1,25 @@
+package BMI;
+
+import java.util.Scanner;
+
+public class scanner {
+
+	public static void main(String[] args) {
+		System.out.println("Wskaznik BMI");
+        System.out.print("Ile ważysz?");
+        Scanner sc = new Scanner(System.in);
+        int  bodyWeight = (int) sc.nextInt();
+        System.out.print("Ile masz wzrostu?");
+        int  bodyHeight = (int) sc.nextInt();
+        System.out.print("Twoje BMI wynosi: " + (bodyWeight / Math.pow(bodyHeight * 0.01, 2)));
+        if (bodyWeight / Math.pow(bodyHeight * 0.01, 2) <=18.4)
+        System.out.println (" niedowaga");
+        if (bodyWeight / Math.pow(bodyHeight * 0.01, 2) >=18.5)
+        	if (bodyWeight / Math.pow(bodyHeight * 0.01, 2) <=24.9)
+        System.out.println (" waga prawidłowa");
+        if (bodyWeight / Math.pow(bodyHeight * 0.01, 2) >=25)
+        	 if (bodyWeight / Math.pow(bodyHeight * 0.01, 2) <=39.9)
+        System.out.println(" nadwaga");
+        if (bodyWeight / Math.pow(bodyHeight * 0.01, 2) >=40)
+        System.out.println(" otyłość");
+        }}
